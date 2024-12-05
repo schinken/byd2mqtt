@@ -58,8 +58,7 @@ def read_byd(ip, port):
 
 try:
     result = read_byd(byd_ip, byd_port)
-    print(result)
-
+    
     mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     mqttc.connect(mqtt_host, mqtt_port, 60)
 
