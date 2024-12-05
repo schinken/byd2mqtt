@@ -18,3 +18,10 @@ docker run -e MQTT_HOST=my.mqtt.server.org --rm byd2mqtt
 - **`MQTT_BASE_TOPIC`**: Base topic for MQTT messages (default: `infrastructure/pv/byd`).
 - **`BYD_IP`**: IP address of the BYD HVS device (default: `192.168.16.254`).
 - **`BYD_PORT`**: Port for the BYD HVS Modbus RTU (default: `8080`).
+
+# Thanks
+
+Thanks to:
+
+* https://github.com/christianh17/ioBroker.bydhvs
+* https://github.com/robertdiers/solar-manager/blob/main/python/BYD.py
