@@ -58,12 +58,15 @@ def read_byd(ip, port):
 
 try:
     result = read_byd(byd_ip, byd_port)
-    
+
     mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     mqttc.connect(mqtt_host, mqtt_port, 60)
+    mqttc.loop_start()
 
     for key, value in result.items():
         mqttc.publish(f"{mqtt_base_topic}/{key}", value)
+
+    mqttc.loop_stop()
 
 except Exception as ex:
     print ("ERROR BYD: ", ex)
